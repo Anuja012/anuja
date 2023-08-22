@@ -1,0 +1,90 @@
+
+question 1.....Write a JavaScript function that reverses a number.
+
+function reverse_a_number(n)
+{
+	n = n + "";
+	return n.split("").reverse().join("");
+}
+console.log(Number(reverse_a_number(32243)));
+
+
+
+2. Write a JavaScript function that checks whether a passed string is a palindrome or not?
+
+
+let checkPalindrome = (stringg) => {
+	return stringg === stringg.split("").reverse().join("");
+};
+
+console.log("Is Palindrome? : " + checkPalindrome("noon"));
+console.log("Is Palindrome?: " + checkPalindrome("apple"));
+
+
+
+
+question 3:   How to generate all combinations of a string in JavaScript ?
+
+let possibleCombinations = (str) => {
+	let combinations = [];
+	for (let i = 0; i < str.length; i++) {
+		for (let j = i + 1; j < str.length + 1; j++) {
+			combinations.push(str.slice(i, j));
+		}
+	}
+	return combinations;
+}
+console.log(possibleCombinations('Dog'));
+
+
+
+4. Write a JavaScript function that returns a string that has letters in alphabetical order.
+
+function alphabet_order(str)
+  {
+return str.split('').sort().join('');
+  }
+console.log(alphabet_order("webmaster"));
+
+
+
+
+question5 JavaScript: Find the longest word within a string
+
+function find_longest_word(str)
+{
+  var array1 = str.match(/\w[a-z]{0,}/gi);
+  var result = array1[0];
+
+  for(var x = 1 ; x < array1.length ; x++)
+  {
+    if(result.length < array1[x].length)
+
+
+
+question6: Converts the first letter of each word of a string in upper case
+
+//Write a JavaScript function that accepts a string as a parameter and converts the first letter of each word of the string in upper case.
+
+function uppercase(str)
+{
+  var array1 = str.split(' ');
+  var newarray1 = [];
+    
+  for(var x = 0; x < array1.length; x++){
+      newarray1.push(array1[x].charAt(0).toUpperCase()+array1[x].slice(1));
+  }
+  return newarray1.join(' ');
+}
+console.log(uppercase("the quick brown fox"));
+
+
+    {
+    result = array1[x];
+    } 
+  }
+  return result;
+}
+console.log(find_longest_word('Web Development Tutorial'));
+
+
